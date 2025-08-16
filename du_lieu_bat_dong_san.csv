@@ -1,3 +1,10 @@
+"""
+Dữ liệu về bất động sản
+- vi_tri: Vị trí của bất động sản
+- dien_tich: Diện tích (m²)
+- so_phong: Số phòng
+- gia: Giá (VND)
+"""
 vi_tri,dien_tich,so_phong,gia
 1,100,3,3000000000
 2,200,4,5000000000
