@@ -1,4 +1,4 @@
-# Đây là danh sách các gói cần thiết cho dự án
+# This is the list of necessary packages for the project
 Flask
 pandas
 scikit-learn
