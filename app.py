@@ -35,7 +35,8 @@ def predict():
     dien_tich = data['dien_tich']
     so_phong = data['so_phong']
 
-    prediction = model.predict([[vi_tri, dien_tich, so_phong]])  # Dự đoán giá
+    # Chuyển đổi các đặc trưng thành dạng số trước khi dự đoán
+    prediction = model.predict([[float(vi_tri), float(dien_tich), int(so_phong)]])  # Dự đoán giá
     return jsonify({'predicted_price': prediction[0]})  # Trả về giá dự đoán dưới dạng JSON
 
 if __name__ == '__main__':
