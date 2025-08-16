@@ -5,6 +5,7 @@ Dữ liệu về bất động sản
 - so_phong: Số phòng
 - gia: Giá (VND)
 """
+
 vi_tri,dien_tich,so_phong,gia
 1,100,3,3000000000
 2,200,4,5000000000
