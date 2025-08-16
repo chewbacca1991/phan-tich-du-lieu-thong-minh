@@ -22,9 +22,15 @@ model = train_model()
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
+
+    # Kiểm tra tính hợp lệ của dữ liệu đầu vào
+    if 'vi_tri' not in data or 'dien_tich' not in data or 'so_phong' not in data:
+        return jsonify({'error': 'Missing input data'}), 400
+
     vi_tri = data['vi_tri']
     dien_tich = data['dien_tich']
     so_phong = data['so_phong']
+
     prediction = model.predict([[vi_tri, dien_tich, so_phong]])
     return jsonify({'predicted_price': prediction[0]})
 
